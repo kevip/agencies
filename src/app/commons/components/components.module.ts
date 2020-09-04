@@ -6,6 +6,8 @@ import { AgencyItemComponent } from './agency-item/agency-item.component';
 import { CommonModule } from '@angular/common';
 import { AgencyFormDetailComponent } from './agency-form-detail/agency-form-detail.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AgmCoreModule } from '@agm/core';
+import { environment } from 'src/environments/environment';
 
 const COMPONENTS = [
     AgencyListComponent,
@@ -17,7 +19,10 @@ const COMPONENTS = [
 
 @NgModule({
     declarations: [...COMPONENTS],
-    imports: [CommonModule, ReactiveFormsModule],
+    imports: [
+        AgmCoreModule.forRoot({ apiKey: environment.googleMapsApiKey}),
+        CommonModule,
+        ReactiveFormsModule],
     exports: [...COMPONENTS],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

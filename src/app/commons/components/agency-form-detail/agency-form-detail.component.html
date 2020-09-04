@@ -46,5 +46,21 @@
                id="longitude" 
                type="text">
     </div>
+    <!-- <pre>{{ presenter.controlLatitude.value | json }}</pre>
+    <pre>{{ presenter.controlLongitude.value | json }}</pre> -->
+    <div class="form-group">
+        <agm-map 
+            [latitude]="presenter.controlLatitude.value"
+            [longitude]="presenter.controlLongitude.value"
+            [disableDefaultUI]="false"
+            [zoom]="zoom">
+            <agm-marker 
+                [markerDraggable]="true"
+                [latitude]="lat" 
+                [longitude]="long"
+                (dragEnd)="markerDragEnd($event.coords)"></agm-marker>
+
+        </agm-map>
+    </div>
     <button class="btn btn-info" (click)="update()">Actualizar</button>
 </form>

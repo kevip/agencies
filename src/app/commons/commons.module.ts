@@ -3,6 +3,7 @@ import { ComponentsModule } from './components/components.module';
 import { AgenciesService } from './services/agencies.service';
 import { AgenciesFacade } from './facades/agencies.facade';
 import { StorageService } from './services/storage.service';
+import { AgencyResolver } from './resolvers/agency.resolver';
 
 @NgModule({
     imports: [ComponentsModule],
@@ -15,6 +16,7 @@ export class CommonsModule {
             providers: [
                 AgenciesService,
                 AgenciesFacade,
+                AgencyResolver,
                 StorageService
             ]
         };

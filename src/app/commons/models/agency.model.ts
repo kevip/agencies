@@ -12,7 +12,7 @@ export class AgencyListModel {
         return (agencies && agencies.length > 0) ? agencies.map(agency =>
             ({
                 name: agency.agencia,
-                code: '001',
+                code: agency.code,
                 district: agency.distrito,
                 province: agency.provincia,
                 department: agency.departamento,

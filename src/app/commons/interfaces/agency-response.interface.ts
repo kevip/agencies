@@ -1,5 +1,6 @@
 export interface IAgenciesResponse {
     agencia: string;
+    code: string;
     distrito: string;
     provincia: string;
     departamento: string;

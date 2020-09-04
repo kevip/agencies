@@ -17,9 +17,7 @@ export class AgenciesComponent implements OnInit, OnDestroy {
 
     ngOnInit(): void {
         this.subs.add(this.facade.getAgencies().subscribe( resp => {
-            console.log(resp);
             this.agencyList = resp;
-
         }));
     }
 

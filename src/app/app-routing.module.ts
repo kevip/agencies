@@ -2,6 +2,7 @@ import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AgenciesComponent } from './views/agencies/agencies.component';
 import { AgencyDetailComponent } from './views/agency/agency-detail.component';
+import { AgencyResolver } from './commons/resolvers/agency.resolver';
 
 const routes: Routes = [
   {
@@ -11,6 +12,7 @@ const routes: Routes = [
   {
     path: 'agency/:code',
     component: AgencyDetailComponent,
+    resolve: { agency: AgencyResolver }
   },
   {
     path: '',

@@ -1,4 +1,4 @@
 export enum endpoints {
-    agencies = '/api/v1/agencies',
+    agencies = '/assets/agencies.json',
     agency = '/api/v1/agency'
 }
