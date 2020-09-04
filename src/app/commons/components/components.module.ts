@@ -1,12 +1,24 @@
-import { LayoutComponent } from "./base/layout.component";
-import { NgModule } from '@angular/core';
+import { HeaderComponent } from './header/header.component';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NavHeaderComponent } from './nav-header/nav-header.component';
+import { AgencyListComponent } from './agency-list/agency-list.component';
+import { AgencyItemComponent } from './agency-item/agency-item.component';
+import { CommonModule } from '@angular/common';
+import { AgencyFormDetailComponent } from './agency-form-detail/agency-form-detail.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 const COMPONENTS = [
-    LayoutComponent
+    AgencyListComponent,
+    AgencyItemComponent,
+    AgencyFormDetailComponent,
+    NavHeaderComponent,
+    HeaderComponent
 ];
 
 @NgModule({
     declarations: [...COMPONENTS],
-    exports: [...COMPONENTS]
+    imports: [CommonModule, ReactiveFormsModule],
+    exports: [...COMPONENTS],
+    schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class ComponentsModule {}

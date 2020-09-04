@@ -1,0 +1,28 @@
+.nav-header {
+    background: #002a8d;
+    color: #fff;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 18px 18px 40px;
+    &__title {
+        p {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            display: inline;
+        }
+    }
+    &__links {
+        list-style: none;
+        display: inline;
+        padding: 0;
+    }
+    &__link {
+        display: inline-block;
+        margin: 0 12px;
+        .fa {
+            font-size: 20px;
+        }
+    }
+}

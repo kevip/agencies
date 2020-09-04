@@ -1,0 +1,50 @@
+<form [formGroup]="presenter.agencyForm" class="form">
+    <div class="form-group">
+        <label for="name">Nombre de Agencia</label>
+        <input [ngClass]="presenter.controlName.state === 'error' ? 'is-invalid' : ''"
+               class="form-control" 
+               formControlName="controlName" 
+               id="name" 
+               type="text">
+        <div [ngClass]="presenter.controlName.state === 'error' ? 'invalid-feedback' : ''">
+            {{presenter.controlName.errorMessage}}
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="address">Direcci&oacute;n</label>
+        <input [ngClass]="presenter.controlAddress.state === 'error' ? 'is-invalid' : ''"
+               class="form-control" 
+               formControlName="controlAddress" 
+               id="address" 
+               type="text">
+        <div [ngClass]="presenter.controlAddress.state === 'error' ? 'invalid-feedback' : ''">
+            {{presenter.controlAddress.errorMessage}}
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="district">Distrito</label>
+        <input [ngClass]="presenter.controlDistrict.state === 'error' ? 'is-invalid' : ''"
+               class="form-control" 
+               formControlName="controlDistrict" 
+               id="district" 
+               type="text">
+        <div [ngClass]="presenter.controlDistrict.state === 'error' ? 'invalid-feedback' : ''">
+            {{presenter.controlDistrict.errorMessage}}
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="latitude">Latitud</label>
+        <input class="form-control" 
+               formControlName="controlLatitude" 
+               id="latitude" 
+               type="text">
+    </div>
+    <div class="form-group">
+        <label for="longitude">Longitud</label>
+        <input class="form-control" 
+               formControlName="controlLongitude" 
+               id="longitude" 
+               type="text">
+    </div>
+    <button class="btn btn-info" (click)="update()">Actualizar</button>
+</form>

@@ -1,5 +1,6 @@
 export interface IAgency {
     name: string;
+    code: string;
     district: string;
     province: string;
     department: string;

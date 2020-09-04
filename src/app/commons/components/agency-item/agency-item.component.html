@@ -1,0 +1,13 @@
+<article class="agency-item" (click)="agencyDetail(agency.code)">
+    <figure class="agency-item__avatar">
+        <img src="assets/img/avatar.png" alt="{{ agency?.name}}">
+    </figure>
+    <div class="agency-item__body">
+        <h3 class="agency-item__title">{{ agency?.name}}</h3>
+        <p class="agency-item__department">{{ agency?.department}}</p>
+        <label class="agency-item__address">{{ agency?.address}}</label>
+    </div>
+    <div class="agency-item__fav">
+        <i class="fa fa-star"></i>
+    </div>
+</article>
