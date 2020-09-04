@@ -16,9 +16,9 @@ export class AgenciesService {
 
     constructor(private http: HttpClient) { }
 
-    public getAgencies(): Observable<AgencyListModel> {
+    public getAgencies(): Observable<IAgenciesResponse[]> {
 
-        return this.http.get<IAgenciesResponse[]>('/assets/agencies.json').pipe(map( resp => new AgencyListModel(resp)));
+        return this.http.get<IAgenciesResponse[]>('/assets/agencies.json');
     }
 
     // public getAgency(): Observable<AgencyModel> {
